@@ -5,53 +5,74 @@
     <title>Chevmo Ranch</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
     <style type="text/css">
+      html {
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+        font-size: 62.5%;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
       body {
         margin: 0;
-        padding: 0 20px 20px 20px;
-        background-color: #f5f5f5;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: small;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1.6rem;
       }
 
       img {
-        max-width: 100%;
-      }
-  
-      #page {
         display: block;
-        width: 400px;
-        margin: 0 auto;
-        padding: 0;
+        max-width: 100%;
+        height: auto;
       }
-  
-      #logo {
-        margin: 0;
-        padding: 0;
-        text-align: center;
-      }
-  
-      #save-the-date {
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        min-height: 100vh;
         margin: 0;
         padding: 20px;
+      }
+
+      .logo {
+        margin: 0;
+      }
+
+      .save-the-date {
+        margin: 0;
+        padding: 10px;
         background-color: white;
         border: 1px solid #ddd;
         text-align: center;
-      }
-  
-      #save-the-date a img {
-        border: none;
       }
     </style>
   </head>
 
   <body>
-    <div id="page">
-      <h1 id="logo"><img src="images/logo.png" width="400" height="400" alt="Chevmo Ranch"></h1>
-      <p id="save-the-date"><a href="http://wedding.chevmoranch.com/"><img src="images/save-the-date.jpg" width="360" height="280" alt="Lindsey Dillon and Michael Baxter are getting married April 26, 2008!"></a></p>
+    <div class="page">
+      <header class="header">
+        <h1 class="logo">
+          <img src="images/logo.png" width="400" height="400" alt="Chevmo Ranch">
+        </h1>
+      </header>
+
+      <main class="main">
+        <p class="save-the-date">
+          <a href="http://wedding.chevmoranch.com/">
+            <img src="images/save-the-date.jpg" width="360" height="280" alt="Lindsey Dillon and Michael Baxter are getting married April 26, 2008!">
+          </a>
+        </p>
+      </main>
     </div> <!-- end #page -->
-  
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39149410-2"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
